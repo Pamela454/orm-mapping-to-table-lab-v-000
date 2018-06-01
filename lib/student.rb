@@ -11,7 +11,7 @@ class Student
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
   def self.create_table
-    sql = <<-SQL
+    sql = <<- SQL
     CREATE TABLE students (
       id INTEGER PRIMARY KEY,
       name TEXT,
@@ -32,6 +32,6 @@ class Student
     VALUES (?, ?)
     SQL
     DB[:conn].execute(sql, self.name, self.grade)
-    @id = student.id
+    @id = students.id
   end
 end
