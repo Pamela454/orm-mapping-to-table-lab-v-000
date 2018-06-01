@@ -27,5 +27,6 @@ class Student
   end
 
   def save
+    sql = ""
   end
 end
